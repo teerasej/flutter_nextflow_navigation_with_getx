@@ -12,7 +12,6 @@ class NavigationController extends GetxController {
     currentIndex.value = index;
   }
 
-  // For Catalog tab
   Route? onGenerateCatalogRoute(RouteSettings settings) {
     switch (settings.name) {
       case '/catalog':
@@ -20,7 +19,6 @@ class NavigationController extends GetxController {
           settings: settings,
           page: () => CatalogPage(),
         );
-      // Add your detail route here if needed
       case '/catalog/detail':
         return GetPageRoute(
           settings: settings,
@@ -31,7 +29,6 @@ class NavigationController extends GetxController {
     }
   }
 
-  // For Settings tab
   Route? onGenerateSettingsRoute(RouteSettings settings) {
     switch (settings.name) {
       case '/settings':
