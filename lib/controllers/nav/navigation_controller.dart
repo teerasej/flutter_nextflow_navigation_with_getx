@@ -6,47 +6,5 @@ import 'package:flutter_nextflow_navigation_with_getx/pages/setting/setting_sile
 import 'package:get/get.dart';
 
 class NavigationController extends GetxController {
-  var currentIndex = 0.obs;
-  final pages = ['/catalog', '/settings'];
-
-  void changePage(int index) {
-    currentIndex.value = index;
-  }
-
-  // For Catalog tab
-  Route? onGenerateCatalogRoute(RouteSettings settings) {
-    switch (settings.name) {
-      case '/catalog':
-        return GetPageRoute(
-          settings: settings,
-          page: () => CatalogPage(),
-        );
-      // Add your detail route here if needed
-      case '/catalog/detail':
-        return GetPageRoute(
-          settings: settings,
-          page: () => DetailPage(),
-        );
-      default:
-        return null;
-    }
-  }
-
-  // For Settings tab
-  Route? onGenerateSettingsRoute(RouteSettings settings) {
-    switch (settings.name) {
-      case '/settings':
-        return GetPageRoute(
-          settings: settings,
-          page: () => SettingPage(),
-        );
-      case '/settings/silent':
-        return GetPageRoute(
-          settings: settings,
-          page: () => SettingSilentPage(),
-        );
-      default:
-        return null;
-    }
-  }
+  
 }
